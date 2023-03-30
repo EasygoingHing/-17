@@ -1,0 +1,44 @@
+﻿<Window x:Class="Крутолапов.EditRecord"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Крутолапов"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="EditRecord" Height="450" Width="387">
+    <Grid Margin="0,-2,0,2">
+        <Button x:Name="btEditRecord" Content="Изменить" HorizontalAlignment="Left" Margin="105,286,0,0" VerticalAlignment="Top" Click="btEditRecord_Click" Height="20" Width="65"/>
+        <Button x:Name="btExit" Content="Отмена" HorizontalAlignment="Left" Margin="217,287,0,0" VerticalAlignment="Top" Width="74" Click="btExit_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.209"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="tbFIOsportsmena" HorizontalAlignment="Left" Margin="21,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbFIOtrenera" HorizontalAlignment="Left" Margin="21,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbNazvaniyStran" HorizontalAlignment="Left" Margin="21,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbRating2017" HorizontalAlignment="Left" Margin="249,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbRating2018" HorizontalAlignment="Left" Margin="249,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbRating2019" HorizontalAlignment="Left" Margin="249,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="ФИО спортсмена" HorizontalAlignment="Left" Margin="21,14,0,0" VerticalAlignment="Top"/>
+        <Label Content="Гендер" HorizontalAlignment="Left" Margin="16,58,0,0" VerticalAlignment="Top"/>
+        <Label Content="Год рождения" HorizontalAlignment="Left" Margin="16,100,0,0" VerticalAlignment="Top"/>
+        <Label Content="ФИО тренера" HorizontalAlignment="Left" Margin="16,146,0,0" VerticalAlignment="Top"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="233,102,0,0" VerticalAlignment="Top"/>
+        <Label Content="Рейтинг 2019" HorizontalAlignment="Left" Margin="244,102,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="DataPicker" HorizontalAlignment="Left" Margin="21,124,0,0" VerticalAlignment="Top" Width="116"/>
+        <Label Content="Название стран" HorizontalAlignment="Left" Margin="16,191,0,0" VerticalAlignment="Top"/>
+        <Label Content="Рейтинг 2017" HorizontalAlignment="Left" Margin="245,22,0,0" VerticalAlignment="Top"/>
+        <Label Content="Рейтинг 2018" HorizontalAlignment="Left" Margin="244,60,0,0" VerticalAlignment="Top"/>
+        <Label Content="Рейтинг 2020" HorizontalAlignment="Left" Margin="245,145,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbRating2020" HorizontalAlignment="Left" Margin="249,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbRating2021" HorizontalAlignment="Left" Margin="249,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Рейтинг 2021" HorizontalAlignment="Left" Margin="245,187,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbGender" HorizontalAlignment="Left" Margin="21,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22"/>
+    </Grid>
+</Window>

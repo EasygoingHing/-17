@@ -1,0 +1,45 @@
+﻿<Window x:Class="Крутолапов.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Крутолапов"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="Практическая 17" Height="450" Width="800" ResizeMode="CanMinimize">
+    <Grid x:Name="btFind">
+        <Menu>
+            <MenuItem Header="Действия" Click="btAdd_Click">
+                <MenuItem Header="Добавить запись" Click="btAdd_Click"/>
+                <MenuItem Header="Изменить запись" Click="btEdit_Click"/>
+                <MenuItem Header="Удалить запись" Click="btDelete_Click"/>
+                <MenuItem Header="Поиск" Click="btFind_Click"/>
+                <MenuItem Header="Фильтр" Click="btFilterRec_Click"/>
+            </MenuItem>
+            <MenuItem Header="Выход"  Click="Exit_click"/>
+        </Menu>
+        <DataGrid x:Name="DataGrid" IsReadOnly="True" AutoGenerateColumns="False" d:ItemsSource="{d:SampleData ItemCount=7}" Margin="0,22,0,289">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="110" Header="ФИО спортсмена" Binding= "{Binding FIOSportsmena}"/>
+                <DataGridTextColumn Width="31" Header="Пол" Binding="{Binding Gender}"/>
+                <DataGridTextColumn Width="90" Header="Год рождения" Binding="{Binding YearOfBirth}"/>
+                <DataGridTextColumn Width="110" Header="ФИО тренера" Binding="{Binding FIOTrenera}"/>
+                <DataGridTextColumn Width="90" Header="Страна" Binding="{Binding NazvaniyStran}"/>
+                <DataGridTextColumn Width="83" Header="Рейтинг 2017" Binding="{Binding Rating2017}"/>
+                <DataGridTextColumn Width="83" Header="Рейтинг 2018" Binding="{Binding Rating2018}"/>
+                <DataGridTextColumn Width="83" Header="Рейтинг 2019" Binding="{Binding Rating2019}"/>
+                <DataGridTextColumn Width="83" Header="Рейтинг 2020" Binding="{Binding Rating2020}"/>
+                <DataGridTextColumn Width="83" Header="Рейтинг 2021" Binding="{Binding Rating2021}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btAdd" Content="Добавить запись" HorizontalAlignment="Left" Margin="57,189,0,0" VerticalAlignment="Top" Click="btAdd_Click"/>
+        <Button x:Name="btEdit" HorizontalAlignment="Left" Margin="187,190,0,0" VerticalAlignment="Top" Content="Изменить запись" Click="btEdit_Click"/>
+        <Button x:Name="btDelete" Content="Удалить запись" HorizontalAlignment="Left" Margin="314,191,0,0" VerticalAlignment="Top" Width="98" Click="btDelete_Click"/>
+        <Button x:Name="btFind1" Content="Поиск" HorizontalAlignment="Left" Margin="457,191,0,0" VerticalAlignment="Top" Click="btFind_Click" Width="44"/>
+        <TextBox x:Name="TB" HorizontalAlignment="Left" Margin="550,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Поиск по ФИО" HorizontalAlignment="Left" Margin="550,166,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="FilterTB" HorizontalAlignment="Left" Margin="550,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Фильтр по ФИО" HorizontalAlignment="Left" Margin="546,210,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btFilterRec" Content="Фильтр" HorizontalAlignment="Left" Margin="457,229,0,0" VerticalAlignment="Top" Click="btFilterRec_Click"/>
+    </Grid>
+</Window>

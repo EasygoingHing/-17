@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище RatingTennisistovModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="RatingTable">
+          <Key>
+            <PropertyRef Name="FIOSportsmena" />
+          </Key>
+          <Property Name="FIOSportsmena" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="YearOfBirth" Type="date" Nullable="false" />
+          <Property Name="FIOTrenera" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NazvaniyStran" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Rating2017" Type="int" Nullable="false" />
+          <Property Name="Rating2018" Type="int" Nullable="false" />
+          <Property Name="Rating2019" Type="int" Nullable="false" />
+          <Property Name="Rating2020" Type="int" Nullable="false" />
+          <Property Name="Rating2021" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Хранилище RatingTennisistovModelContainer">
+          <EntitySet Name="RatingTable" EntityType="Self.RatingTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RatingTennisistovModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="RatingTable">
+          <Key>
+            <PropertyRef Name="FIOSportsmena" />
+          </Key>
+          <Property Name="FIOSportsmena" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="YearOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FIOTrenera" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NazvaniyStran" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Rating2017" Type="Int32" Nullable="false" />
+          <Property Name="Rating2018" Type="Int32" Nullable="false" />
+          <Property Name="Rating2019" Type="Int32" Nullable="false" />
+          <Property Name="Rating2020" Type="Int32" Nullable="false" />
+          <Property Name="Rating2021" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="RatingTennisistovEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="RatingTables" EntityType="Self.RatingTable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище RatingTennisistovModelContainer" CdmEntityContainer="RatingTennisistovEntities">
+          <EntitySetMapping Name="RatingTables">
+            <EntityTypeMapping TypeName="RatingTennisistovModel.RatingTable">
+              <MappingFragment StoreEntitySet="RatingTable">
+                <ScalarProperty Name="FIOSportsmena" ColumnName="FIOSportsmena" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="YearOfBirth" ColumnName="YearOfBirth" />
+                <ScalarProperty Name="FIOTrenera" ColumnName="FIOTrenera" />
+                <ScalarProperty Name="NazvaniyStran" ColumnName="NazvaniyStran" />
+                <ScalarProperty Name="Rating2017" ColumnName="Rating2017" />
+                <ScalarProperty Name="Rating2018" ColumnName="Rating2018" />
+                <ScalarProperty Name="Rating2019" ColumnName="Rating2019" />
+                <ScalarProperty Name="Rating2020" ColumnName="Rating2020" />
+                <ScalarProperty Name="Rating2021" ColumnName="Rating2021" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
